@@ -9,4 +9,4 @@ Product.delete_all
 
 Product.create(title:'Seven mobile apps in seven weeks', \
   description: %{<p><em>Mobile platform</em>Can we do this?</p>}, \
-  image_url: 'https://www.google.com/search?q=i+am+awesome&safe=off&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj9seu8sJzRAhUMfiYKHZ-YAI4Q_AUICCgB', price: 75.89)
+  image_url: 'test.jpg', price: 75.89)
