@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class CartsControllerTest < ActionDispatch::IntegrationTest
+  
+  include Devise::Test::IntegrationHelpers
   setup do
+    sign_in users(:one)
     @cart = carts(:one)
   end
 
