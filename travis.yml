@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+  - "2.2.0"
+services:
+  - postgresql
+script: 
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
+before_script:
+  - psql -c 'create database gearbay_test;' -U ubuntu
+bundler_args: --binstubs=./bundler_stubs
